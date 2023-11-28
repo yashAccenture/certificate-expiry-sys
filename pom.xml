@@ -31,18 +31,16 @@
 				<version>${mule.maven.plugin.version}</version>
 				<extensions>true</extensions>
 				<configuration>
-					<cloudHubDeployment>
-						<uri>https://anypoint.mulesoft.com/</uri>
-						<muleVersion>${app.runtime}</muleVersion>
-						<username>${username}</username>
-						<password>${password}</password>
-						<applicationName>${project.artifactId}</applicationName>
-						<environment>Sandbox</environment>
-						<workerType>${workerType}</workerType>
-						<workers>1</workers>
-						<objectStoreV2>true</objectStoreV2>
-						<region>${region}</region>
-					</cloudHubDeployment>
+					<armDeployment>
+						<uri>https://anypoint.mulesoft.com</uri>
+						<properties>
+							<anypoint.platform.client_id>f2e73d938276439489abc9ba95b40183</anypoint.platform.client_id>
+							<anypoint.platform.client_secret>bfd225B57FBe4555Bae6E0341bC3F491</anypoint.platform.client_secret>
+							<api.autodiscoveryID>19128965</api.autodiscoveryID>
+							<security.key>MmaMulesoftSecureKey1234</security.key>
+							<anypoint.platform.config.analytics.agent.enabled>true</anypoint.platform.config.analytics.agent.enabled>
+						</properties>
+					</armDeployment>
 				</configuration>
 			</plugin>
 		</plugins>
