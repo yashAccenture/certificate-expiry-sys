@@ -5,7 +5,9 @@ agent any
 stages {
 stage('Build Application') {
 steps {
+script{
 sh 'mvn clean install'
+}
 }
 }
 stage('Test') {
